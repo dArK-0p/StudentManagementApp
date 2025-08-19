@@ -12,22 +12,24 @@ public class Main {
         boolean exitToggle = true;
 
         while (exitToggle) {
-            System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s ",
+            System.out.printf(
+                    "%s%n%s%n%s%n%s%n%s%n%s%n%s ",
                     "1. Add Student",
                     "2. Update Student",
                     "3. Delete Student",
                     "4. Display All Students",
                     "5. Display Student by ID",
                     "6. Exit",
-                    "Enter your choice: ");
-            char choice = sc.next().charAt(0);
+                    "Enter your choice: "
+            );
+            char choice = sc.next().charAt(0); sc.nextLine();
 
             switch(choice) {
-                case '1' -> StudentOperations.addStudent(sc);
-                case '2' -> StudentOperations.updateStudent(sc, 0);
-                case '3' -> StudentOperations.deleteStudent(0);
+                case '1' -> StudentOperations.addStudent();
+                case '2' -> StudentOperations.updateStudent();
+                case '3' -> StudentOperations.deleteStudent();
                 case '4' -> StudentOperations.displayTable();
-                case '5' -> StudentOperations.displayStudentById(0);
+                case '5' -> StudentOperations.displayStudentById();
                 case '6' -> {
                     System.out.println("Exiting....");
                     exitToggle = false;

@@ -13,10 +13,10 @@ public record Student(int sId, String sName, String sPhone, String sCity) {
     public Student() {this(0, "", "", "");}
 
     @Override
-    public String toString() {
-        return String.format(
-                "Student ID: %d%n" + "Student Name: %s%n" + "Student Phone: %s%n" + "Student City: %s%n",
-                sId, sName, sPhone, sCity
-        );
+    public String toString() { return
+            String.format(
+                    "ID: %d%n" + "Name: %s%n" + "Phone: %s%n" + "City: %s%n",
+                    sId, sName, sPhone, sCity
+            );
     }
 }
